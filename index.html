@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .controls button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Product Carousel</title>
+</head>
+<body>
+
+<div class="container mx-auto mt-8">
+    <div class="carousel" id="carousel">
+        <div class="slide">
+            <img src="assets/arno-senoner-oCXVxwTFwqE-unsplash.jpg" style="height: 600px;">
+            <div class="product-info">
+                <h3>Book Bag</h3>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="assets/irene-kredenets-tcVH_BwHtrc-unsplash.jpg" style="height: 600px;">
+            <div class="product-info">
+                <h3>Kit Bag</h3>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="assets/jakob-owens-BmH09wAkJa8-unsplash.jpg" style="height: 600px;" alt="Product 2">
+            <div class="product-info">
+                <h3>Bucket bag</h3>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="assets/wiser-by-the-mile-SwWCo1k92M4-unsplash.jpg" style="height: 600px;" alt="Product 2">
+            <div class="product-info">
+                <h3>Bowler bag</h3>
+            </div>
+        </div>
+    </div>
+    <div class="controls">
+        <button onclick="prevSlide(); restartTimer();">Prev</button>
+        <button onclick="nextSlide(); restartTimer();">Next</button>
+    </div>
+    
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
